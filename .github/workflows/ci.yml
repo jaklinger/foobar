@@ -25,3 +25,6 @@ jobs:
 
       - name: List bucket items
         run: aws s3 ls nhsd-nrlf--mgmt--ci-test-bucket
+
+      - name: List bucket items 2
+        run: aws s3 ls nhsd-nrlf--mgmt--ci-test-bucket
