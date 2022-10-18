@@ -20,8 +20,11 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: ${{ secrets.ROLE_NAME }}
-          role-session-name: github-actions-ci
+          role-session-name: github-actions-ci-fork-test
           aws-region: eu-west-2
 
       - name: List bucket items
+        run: aws s3 ls nhsd-nrlf--mgmt--ci-test-bucket
+
+      - name: List bucket items 2
         run: aws s3 ls nhsd-nrlf--mgmt--ci-test-bucket
